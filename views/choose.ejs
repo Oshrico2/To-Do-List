@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<div class="centered">
+<h1>Choose Your List</h1>
+</div>
+<div class="lists">
+    <form action="/add-list" method="post">
+        <input type="text" name="newItem" placeholder="Enter To do list as you wish">
+        <button type="submit" name="Item">+</button>
+    </form>
+    <form action="/"+ method="get">
+
+        <% listNames.forEach(name => { %>
+            <div class="list">
+                
+            <a href="/<%= name %>" style="text-decoration: none;"><%= name %></a><br>
+        </div>
+        <% }) %>
+</form>
+</div>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

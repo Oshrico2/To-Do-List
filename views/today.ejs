@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+    <%const months=['January', 'February' , 'March' , 'April' , 'May' , 'June' ,'July', 'August' , 'September'
+        , 'October' , 'November' , 'December' ]; const days=['Sunday', 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday'
+        , 'Friday' , 'Saturday' ]; const currentDate=new Date(); const dayName=days[currentDate.getDay()]; const
+        monthName=months[currentDate.getMonth()]; const dayOfMonth=currentDate.getDate(); const
+        formattedDate=`${dayName}, ${monthName} ${dayOfMonth}`;%>
+
+        <div class="centered">
+            <h1>
+                <%=formattedDate%>
+            </h1>
+        </div>
+        <div class="box">
+            <%if(locals.list){%>
+                <% list.forEach(item=>{ %>
+                    <form action="/delete" method="post">
+                    <div class="item">
+                        <input type="checkbox" id="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+                        <p id="text">
+                            <%= item.name %>
+                        </p>
+                        <!-- Only for name -->
+                        <input type="hidden" name="listName" value="Today">
+                    </div>
+                </form>
+                    <% }); %>
+
+
+                        <%}%>
+                            
+
+                                <form class="item" action="/" method="post">
+                                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                                    <button type="submit" name="list" value="Today">+</button>
+                                </form>
+        </div>
+
+
+
+        <%- include("partials/footer.ejs") %>

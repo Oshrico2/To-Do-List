@@ -1,0 +1,135 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #0b212a, #261dd1);
+    height: 100vh;
+    overflow: auto;
+    font-family: 'Questrial', sans-serif;
+
+}
+
+.centered {
+    text-align: center;
+    height: 15vh;
+    display: flex;
+}
+
+.centered h1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); 
+
+}
+.box{
+    padding: 30px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 350px;
+    padding: 10px ;
+    margin: 10px auto;
+    background: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); 
+}
+.lists{
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 350px;
+    padding: 10px ;
+    margin: 10px auto;
+    /* background: black; */
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.3); 
+}
+.lists input{
+    width: 250px;
+}
+.list {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 350px;
+    padding: 10px ;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); 
+}
+.list a{
+    color: white;
+    display: block;
+}
+
+
+
+.newList input{
+    max-width: 300px;
+    width: 280px;
+    text-align: center;
+}
+.item p{
+    margin-left: 20px;
+    margin-bottom: auto;
+    font-family: 'Courgette', cursive;}
+input{
+    text-align: center;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    color: white;
+}
+button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #9994a2;
+    color: black;
+    font-size: 30px;
+    border-width: 0;
+    margin-left: auto;
+}
+footer{
+    text-align: center;
+    color: white;
+    /* margin: auto; */
+}
+
+#checkbox:checked + #text {
+    text-decoration: line-through;
+    text-decoration-color: #261dd1;
+    text-decoration-thickness: 0.2rem;
+}
+.navbar{
+    background: linear-gradient(45deg, #0b212a, #261dd1);
+    margin-bottom: 40px;
+    
+}
+.navbar a{
+    color: white;
+    font-size: large;
+    padding: 0 10px;
+}
+.navbar a:hover{
+    background-color:#6963d1;
+}
+.fa{
+    color: white;
+}
+.container-fluid{
+    margin-top: 15px;
+}
