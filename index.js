@@ -8,7 +8,8 @@ const app = express();
 // var listWork = [];
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-mongoose.connect("mongodb+srv://admin-osher:Osher8642@cluster0.2yb6sz3.mongodb.net/todolistDB");
+//enter your details:
+mongoose.connect("mongodb+srv://Username:Password@cluster0.2yb6sz3.mongodb.net/todolistDB");
 const itemsSchema = new mongoose.Schema({
     name:{
         type: String,
