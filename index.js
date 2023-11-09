@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 //enter your details:
-mongoose.connect("mongodb+srv://Username:Password@cluster0.2yb6sz3.mongodb.net/todolistDB");
+mongoose.connect("mongodb://localhost:27017/todolistDB");
 const itemsSchema = new mongoose.Schema({
     name:{
         type: String,
