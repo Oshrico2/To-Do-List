@@ -8,8 +8,7 @@ const app = express();
 // var listWork = [];
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-//enter your details:
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect(process.env.DATABASE);
 const itemsSchema = new mongoose.Schema({
     name:{
         type: String,
@@ -176,7 +175,7 @@ app.post("/add-list",(req,res)=>{
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 3000;
+    port = 4000;
 }
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
